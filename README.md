@@ -8,7 +8,11 @@ Just apply the patch spike_uart.patch for riscv-isa-sim repository. But I put sp
 is in riscv-isa-sim.
 
 just go to chapter 12 and try:
-./make_spike_firmware.sh ascii_loop.ty to see a ascii print loop of these tiny code:
+```bash
+./make_spike_firmware.sh ascii_loop.ty 
+```
+to execute a ascii print loop of these tiny program:
+```
 {ascii loop}
 program;
 var i = 33;
@@ -22,8 +26,7 @@ begin
       endif;
   endwhile;
 end;
-
-
+```
 I want to share this work! Feel free to experiement and modify, optimizie, extend and more...
 
 Best,
