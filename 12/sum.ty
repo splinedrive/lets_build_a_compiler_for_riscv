@@ -1,0 +1,9 @@
+program
+var x = 1,
+    y = 65,
+    z = 1;
+
+begin
+    x = (((x/5) + (y+4)) * (z * 5))
+    x = x / 2
+end

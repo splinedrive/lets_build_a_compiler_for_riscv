@@ -1,0 +1,74 @@
+	.global _start
+	.section .data
+	X:	 .word 0
+	Y:	 .word 65
+	Z:	 .word 5
+	.section .text
+_start:
+L00:
+	
+# LoadConst
+	li t0,1
+	
+# BranchFalse
+	beq t0,x0,L01
+	
+# LoadVar
+	lw t0,X
+	
+# Push
+	addi sp,sp,-4
+	sw t0,0(sp)
+	
+# LoadConst
+	li t0,1
+	
+# PopAdd
+	addi sp,sp,4
+	lw t1,-4(sp)
+	add t0,t1,t0
+	
+# Store
+	la t1,X
+	sw t0,0(t1)
+	
+# LoadVar
+	lw t0,X
+	
+# Push
+	addi sp,sp,-4
+	sw t0,0(sp)
+	
+# CompareExpression
+	
+# LoadConst
+	li t0,3
+	
+# PopCompare
+	addi sp,sp,4
+	lw t1,-4(sp)
+	sub t0,t1,t0
+	
+# SetGreaterOrEqual
+	seqz t1,t0
+	sgtz t0,t0
+	or t0,t0,t1
+	
+# BranchFalse
+	beq t0,x0,L02
+	
+# Branch
+	j L01
+L02:
+	
+# LoadVar
+	lw t0,Y
+	
+# WriteIt
+	la t1,0x30000000
+	sw t0,0(t1)
+	
+# Branch
+	j L00
+L01:
+	ret

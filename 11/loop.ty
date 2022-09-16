@@ -1,0 +1,13 @@
+program
+var i = 33 
+begin
+  while 1 < 2
+      Write (i)
+      if i = 128  
+        i = 33 
+        else 
+        i = i + 1 
+      endif
+  endwhile
+end
+.

@@ -1,0 +1,5 @@
+program
+var x
+begin
+x = (5+5)*(10+3)
+end

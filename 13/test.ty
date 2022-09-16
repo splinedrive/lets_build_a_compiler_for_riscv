@@ -1,0 +1,14 @@
+va
+vb
+vc
+px(a,b,c) b
+  a=c
+  b=a
+  c=b
+e
+
+Py
+b
+  x(a,b,c)
+e
+.

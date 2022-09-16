@@ -1,0 +1,15 @@
+program
+var x = 0,
+    y = 65,
+    z = 5
+
+begin
+  while 1
+    if x >= 3
+      break 
+    else
+      x = x + 1
+      Write(y)
+    endif
+  endwhile
+end

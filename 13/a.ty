@@ -1,0 +1,7 @@
+program;
+var x,y;
+begin
+  if x = 1;
+    y=1; 
+  endif;
+end;
